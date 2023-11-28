@@ -14,8 +14,7 @@
   },
   "files": [
     "lib/",
-    "tsconfig.json",
-    "package.json"
+    "tsconfig.json"
   ],
   "type": "module",
   "main": "./lib/index.js",
