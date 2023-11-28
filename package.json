@@ -1,0 +1,97 @@
+{
+  "name": "@burand/functions",
+  "version": "3.0.0",
+  "description": "Fornece métodos essenciais para a manipulação de uma coleção no Firebase, além de métodos comuns para uso.",
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "tsc --noEmit && eslint --ext .js,.ts .",
+    "build": "npm run clean && tsc"
+  },
+  "homepage": "https://github.com/flavianoredressa/burand-functions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flavianoredressa/burand-functions.git"
+  },
+  "files": [
+    "lib/",
+    "tsconfig.json",
+    "package.json"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "exceptions": [
+        "./lib/exceptions"
+      ],
+      "firestore": [
+        "./lib/firestore"
+      ],
+      "http": [
+        "./lib/http"
+      ],
+      "middlewares": [
+        "./lib/middlewares"
+      ],
+      "typings": [
+        "./lib/typings"
+      ],
+      "utils": [
+        "./lib/utils"
+      ]
+    }
+  },
+  "exports": {
+    "./exceptions": {
+      "types": "./lib/exceptions/index.d.ts",
+      "import": "./lib/exceptions/index.js"
+    },
+    "./firestore": {
+      "types": "./lib/firestore/index.d.ts",
+      "import": "./lib/firestore/index.js"
+    },
+    "./http": {
+      "types": "./lib/http/index.d.ts",
+      "import": "./lib/http/index.js"
+    },
+    "./middlewares": {
+      "types": "./lib/middlewares/index.d.ts",
+      "import": "./lib/middlewares/index.js"
+    },
+    "./typings": {
+      "types": "./lib/typings/index.d.ts",
+      "import": "./lib/typings/index.js"
+    },
+    "./utils": {
+      "types": "./lib/utils/index.d.ts",
+      "import": "./lib/utils/index.js"
+    },
+    "./tsconfig.json": {
+      "default": "./tsconfig.json"
+    }
+  },
+  "dependencies": {
+    "@burand/core": "github:LeonardoTonizza/burand-core",
+    "express": "^4.0.0",
+    "express-async-errors": "^3.0.0",
+    "firebase-admin": "^11.0.0",
+    "firebase-functions": "^4.0.0",
+    "got": "^13.0.0",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@burand/eslint-config-functions": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.0"
+  }
+}
